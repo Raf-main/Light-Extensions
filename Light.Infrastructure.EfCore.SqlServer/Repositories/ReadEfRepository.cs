@@ -2,7 +2,7 @@
 using Light.Infrastructure.Extensions.Repositories;
 using Microsoft.EntityFrameworkCore;
 
-namespace Light.Infrastructure.EfCore.SqlServer.Repositories;
+namespace Light.Infrastructure.EfCore.Repositories;
 
 public class ReadEfRepository<TEntity, TKey> : IAsyncReadRepository<TEntity, TKey>
     where TEntity : class, IEntity<TKey> where TKey : struct

@@ -1,7 +1,6 @@
 ﻿using Light.Core.Extensions.Entities.Interfaces;
 using Light.Infrastructure.Extensions.Repositories;
 using Light.Infrastructure.MongoDb.Contexts.Interfaces;
-using MongoDB.Bson;
 using MongoDB.Driver;
 
 namespace Light.Infrastructure.MongoDb.Repositories;

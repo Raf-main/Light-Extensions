@@ -2,7 +2,7 @@
 using Light.Infrastructure.Extensions.Repositories;
 using Microsoft.EntityFrameworkCore;
 
-namespace Light.Infrastructure.EfCore.SqlServer.Repositories;
+namespace Light.Infrastructure.EfCore.Repositories;
 
 public abstract class GenericEfRepository<TEntity, TKey> : IAsyncGenericRepository<TEntity, TKey>
     where TEntity : class, IEntity<TKey> where TKey : struct

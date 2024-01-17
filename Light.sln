@@ -5,8 +5,6 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Light.Core.Extensions", "Light.Core.Extensions\Light.Core.Extensions.csproj", "{458328B6-69BE-430D-B402-9837508A8E98}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Light.Infrastructure.EfCore.SqlServer", "Light.Infrastructure.EfCore.SqlServer\Light.Infrastructure.EfCore.SqlServer.csproj", "{E34DD64F-0E5C-42CB-A342-F89BE158354B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Light.MessageBrokers.Rabbit", "Light.MessageBrokers.Rabbit\Light.MessageBrokers.Rabbit.csproj", "{0CB51400-1FB9-4293-AE3D-B725632E8B4A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Light.MessageBrokers.ApacheKafka", "Light.MessageBrokers.ApacheKafka\Light.MessageBrokers.ApacheKafka.csproj", "{5F91949D-E9B9-428D-B970-48360DC3BD98}"
@@ -16,6 +14,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Light.Infrastructure.MongoDb", "Light.Infrastructure.MongoDb\Light.Infrastructure.MongoDb.csproj", "{F5700264-D3F3-482C-BDD1-34320BD1153B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Light.Infrastructure.Extensions", "Light.Infrastructure.Extensions\Light.Infrastructure.Extensions.csproj", "{DA918EDE-0627-4691-A101-D97DF63C51A5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Light.Infrastructure.EfCore", "Light.Infrastructure.EfCore.SqlServer\Light.Infrastructure.EfCore.csproj", "{CD254CCE-9D70-440E-B50A-A59B87A2E746}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,10 +27,6 @@ Global
 		{458328B6-69BE-430D-B402-9837508A8E98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{458328B6-69BE-430D-B402-9837508A8E98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{458328B6-69BE-430D-B402-9837508A8E98}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E34DD64F-0E5C-42CB-A342-F89BE158354B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E34DD64F-0E5C-42CB-A342-F89BE158354B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E34DD64F-0E5C-42CB-A342-F89BE158354B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E34DD64F-0E5C-42CB-A342-F89BE158354B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0CB51400-1FB9-4293-AE3D-B725632E8B4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0CB51400-1FB9-4293-AE3D-B725632E8B4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CB51400-1FB9-4293-AE3D-B725632E8B4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +47,10 @@ Global
 		{DA918EDE-0627-4691-A101-D97DF63C51A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA918EDE-0627-4691-A101-D97DF63C51A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA918EDE-0627-4691-A101-D97DF63C51A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD254CCE-9D70-440E-B50A-A59B87A2E746}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD254CCE-9D70-440E-B50A-A59B87A2E746}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD254CCE-9D70-440E-B50A-A59B87A2E746}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD254CCE-9D70-440E-B50A-A59B87A2E746}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

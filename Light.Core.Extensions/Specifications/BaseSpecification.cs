@@ -1,5 +1,5 @@
-﻿using System.Linq.Expressions;
-using Light.Core.Extensions.Specifications.Interfaces;
+﻿using Light.Core.Extensions.Specifications.Interfaces;
+using System.Linq.Expressions;
 
 namespace Light.Core.Extensions.Specifications;
 
