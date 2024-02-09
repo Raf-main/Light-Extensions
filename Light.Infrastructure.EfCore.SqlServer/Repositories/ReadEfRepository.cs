@@ -4,17 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Light.Infrastructure.EfCore.Repositories;
 
-public class ReadEfRepository<TEntity, TKey> : IAsyncReadRepository<TEntity, TKey>
+public class ReadEfRepository<TEntity, TKey>(DbContext context) : IAsyncReadRepository<TEntity, TKey>
     where TEntity : class, IEntity<TKey> where TKey : struct
 {
-    protected readonly DbContext Context;
-    protected readonly DbSet<TEntity> Table;
-
-    public ReadEfRepository(DbContext context)
-    {
-        Context = context;
-        Table = context.Set<TEntity>();
-    }
+    protected readonly DbContext Context = context;
+    protected readonly DbSet<TEntity> Table = context.Set<TEntity>();
 
     protected virtual IQueryable<TEntity> AsQueryable => Table.AsQueryable();
 

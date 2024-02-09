@@ -2,7 +2,7 @@
 
 namespace Light.Infrastructure.Extensions.Repositories;
 
-public interface IAsyncReadRepository<TEntity, TKey> where TEntity : IEntity<TKey> where TKey : struct
+public interface IAsyncReadRepository<TEntity, in TKey> where TEntity : IEntity<TKey> where TKey : struct
 {
     IQueryable<TEntity> Find();
 

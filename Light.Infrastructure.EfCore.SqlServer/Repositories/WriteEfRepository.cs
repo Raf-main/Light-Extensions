@@ -4,17 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Light.Infrastructure.EfCore.Repositories;
 
-public class WriteEfRepository<TEntity, TKey> : IAsyncWriteRepository<TEntity, TKey>
+public class WriteEfRepository<TEntity, TKey>(DbContext context) : IAsyncWriteRepository<TEntity, TKey>
     where TEntity : class, IEntity<TKey> where TKey : struct
 {
-    protected readonly DbContext Context;
-    protected readonly DbSet<TEntity> Table;
-
-    public WriteEfRepository(DbContext context)
-    {
-        Context = context;
-        Table = context.Set<TEntity>();
-    }
+    protected readonly DbContext Context = context;
+    protected readonly DbSet<TEntity> Table = context.Set<TEntity>();
 
     protected virtual IQueryable<TEntity> AsQueryable => Table.AsQueryable();
 
