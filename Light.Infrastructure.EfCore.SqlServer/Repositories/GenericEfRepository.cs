@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Light.Infrastructure.EfCore.Repositories;
 
-public abstract class GenericEfRepository<TEntity, TKey> : IAsyncGenericRepository<TEntity, TKey>
+public class GenericEfRepository<TEntity, TKey> : IAsyncGenericRepository<TEntity, TKey>
     where TEntity : class, IEntity<TKey> where TKey : struct
 {
     protected readonly DbContext Context;
@@ -12,7 +12,7 @@ public abstract class GenericEfRepository<TEntity, TKey> : IAsyncGenericReposito
     protected readonly DbSet<TEntity> Table;
     protected readonly IAsyncWriteRepository<TEntity, TKey> WriteRepository;
 
-    protected GenericEfRepository(DbContext context)
+    public GenericEfRepository(DbContext context)
     {
         Context = context;
         Table = context.Set<TEntity>();
@@ -20,7 +20,7 @@ public abstract class GenericEfRepository<TEntity, TKey> : IAsyncGenericReposito
         WriteRepository = new WriteEfRepository<TEntity, TKey>(context);
     }
 
-    protected GenericEfRepository(DbContext context,
+    public GenericEfRepository(DbContext context,
         IAsyncReadRepository<TEntity, TKey> readRepository,
         IAsyncWriteRepository<TEntity, TKey> writeRepository
     )
